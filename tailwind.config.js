@@ -27,7 +27,8 @@ module.exports = {
       colors: {
         primary: '#1c1c22',
         accent: {
-          DEFAULT: '#00e187'
+          DEFAULT: '#00e187',
+          foreground: "#00e187"
         }
         // border: "hsl(var(--border))",
         // input: "hsl(var(--input))",
@@ -83,6 +84,10 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    // gridTemplateColumns: {
+    //   '20/80': '20% 80%',
+    //   '30/70': '30% 70%',
+    // }
   },
   plugins: [require("tailwindcss-animate")],
 }
