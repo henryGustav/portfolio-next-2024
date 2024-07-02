@@ -7,6 +7,8 @@ import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaNode } from 'react-icons/fa
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
 import './index.css'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import { Tooltip, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { TooltipContent } from '@radix-ui/react-tooltip'
 const about = {
   title: 'About me',
   description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quo architecto odio reprehenderit beatae delectus omnis explicabo neque amet, 
@@ -14,10 +16,10 @@ const about = {
     Laboriosam et natus odio unde?`,
   info: [
     { fieldName: 'Name', fieldValue: 'Henry' },
+    { fieldName: 'Email', fieldValue: 'henry_gustavo18@hotmail.com' },
     { fieldName: 'Phone', fieldValue: '(+593) 969719186' },
     { fieldName: 'Experience', fieldValue: '4+ Years' },
     { fieldName: 'Residencia', fieldValue: 'Quito - Ecuador' },
-    { fieldName: 'Email', fieldValue: 'henry_gustavo18@hotmail.com' },
     { fieldName: 'Freelance', fieldValue: 'Available' },
   ],
 }
@@ -81,7 +83,7 @@ const Resume = () => {
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me`</TabsTrigger>
+            <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
           <div className="w-full mt-[5rem] xl:mt-[-2.5rem] ">
             <TabsContent value="experience" className="w-full">
@@ -142,11 +144,52 @@ const Resume = () => {
             </TabsContent>
 
             <TabsContent value="skills" className="w-full">
-              skills
+              <div className="flex flex-col gap-[30px] mb-8">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <p className="max-w=[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+                </div>
+              </div>
+              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                {skills.skillList.map((skill, index) => (
+                  <li key={index}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger
+                          className="w-full h-[150px] bg-[#232329] rounded-xl flex
+                        justify-center items-center
+                        "
+                        >
+                          <div
+                            className="text-6xl hover:!text-accent hover:transition-all 
+                          hover:duration-300"
+                          >
+                            {skill.icon}
+                          </div>
+                        </TooltipTrigger>
+                        <TooltipContent className="bg-white/80 w-full px-4 rounded-[5px] text-primary">
+                          <p>{skill.name}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </li>
+                ))}
+              </ul>
             </TabsContent>
 
             <TabsContent value="about" className="w-full">
-              about
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className='text-4xl font-bold'>{about.title}</h3>
+                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
+                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 gap-x-8 mx-auto xl:mx-0'>
+                  {about.info.map((itemInfo, index) => (
+                    <li key={index} className='flex items-center justify-center xl:justify-start gap-4'>
+                      <span className='text-white/60'>{itemInfo.fieldName}</span>
+                      <span className='text-xl'>{itemInfo.fieldValue}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
