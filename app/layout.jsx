@@ -4,6 +4,8 @@ import './globals.css'
 import Header from '@/components/Header'
 import PageTransition from '@/components/PageTransition'
 import StairTransition from '@/components/StairTransition'
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api'
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -20,9 +22,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={jetbrainsMono.variable}>
-        <Header />
-        <StairTransition />
-        <PageTransition>{children}</PageTransition>
+        <PrimeReactProvider>
+          <Header />
+          <StairTransition />
+          <PageTransition>{children}</PageTransition>
+        </PrimeReactProvider>
       </body>
     </html>
   )
