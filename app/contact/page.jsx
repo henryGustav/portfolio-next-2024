@@ -1,10 +1,7 @@
 'use client'
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt, FaWhatsapp, FaVoicemail, FaLinkedin, FaMailBulk } from 'react-icons/fa'
+import { FaMapMarkedAlt, FaWhatsapp, FaLinkedin, FaMailBulk } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
 const infoList = [
   { icon: <FaWhatsapp />, title: 'Whatsapp', description: '0969719186' },
   { icon: <FaMailBulk />, title: 'Email', description: 'henry_gustavo18@hotmail.com' },
@@ -22,16 +19,6 @@ const Contact = () => {
     >
       <div className="container mx-auto h-100%">
         <div className="flex flex-col xl:flex-row gap-[30px] w-full">
-          {/* <div className="xl:h-[54%] order-2 xl:order-none">
-            <form action="" className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-lg">
-              <p className="text-white/60">Podemos establecer conversación, con gusto responderé tus preguntas.</p>
-
-              <Button size="md" className="max-w-40">
-                Send message
-              </Button>
-            </form>
-          </div> */}
-
           <div
             className="flex items-center w-full
             "
@@ -42,7 +29,11 @@ const Contact = () => {
 
               <div className="flex w-full mt-12 flex-col md:flex-row gap-8">
                 <div className="w-full flex justify-center items-center lg:flex-row md:order-1 order-3">
-                  <img src="/assets/img/vectores/message.svg" alt="" className="md:w-[350px] md:h-[250px] w-[200px] h-[150px]" />
+                  <img
+                    src="/assets/img/vectores/message.svg"
+                    alt=""
+                    className="md:w-[350px] md:h-[250px] w-[200px] h-[150px]"
+                  />
                 </div>
                 <div className="w-full flex justify-center order-2">
                   <ul className=" ">

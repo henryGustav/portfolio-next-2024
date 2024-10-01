@@ -1,5 +1,4 @@
 'use client'
-// import AnimatedText from '../components/AnimatedText'
 import tecnomegaEcommerce from '../../public/assets/projects/tecnomegaEcommerce.svg'
 import tecnomegaLanding from '../../public/assets/projects/tecnomegaLanding.svg'
 import quasad from '../../public/assets/projects/quasad.svg'
@@ -11,17 +10,13 @@ import fashionLanding from '../../public/assets/projects/fashionLanding.png'
 import Image from 'next/image'
 import { Dialog } from 'primereact/dialog'
 
-import { Divider } from 'primereact/divider'
 import './projects.css'
 import { useState } from 'react'
 
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import 'swiper/css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import { GrClose } from 'react-icons/gr'
 import { MdClose } from 'react-icons/md'
-
-import { BsBoxArrowUpRight } from 'react-icons/bs'
 
 // subimages
 import tecnomegaSubImg1 from '../../public/assets/projects/tecnomega/tecnomegaSubImg1.png'
@@ -34,8 +29,7 @@ import tecnomegaAdminSubImg2 from '../../public/assets/projects/tecnomegaAdmin/t
 import tecnomegaAdminSubImg3 from '../../public/assets/projects/tecnomegaAdmin/tecnomegaAdminSubImg3.png'
 import tecnomegaAdminSubImg4 from '../../public/assets/projects/tecnomegaAdmin/tecnomegaAdminSubImg4.png'
 import { Button } from '@/components/ui/button'
-import {motion} from 'framer-motion'
-// import ButtonReusable from '../components/ButtonReusable'
+import { motion } from 'framer-motion'
 const Projetcs = () => {
   const projetcs = [
     {
@@ -82,11 +76,9 @@ const Projetcs = () => {
       info: 'easybox info',
     },
 
-    // Personal
     {
       code: 'journalApp',
       img: jornalApp,
-      // bgColor: 'secondary',
       group: 'personal',
       title: 'Joaunal App',
       tools: 'React / Firebase / JavaScrpt / Cloudinary / SASS / Redux',
@@ -104,7 +96,6 @@ const Projetcs = () => {
     {
       code: 'freshFruit',
       img: freshFruitApp,
-      // bgColor: 'gray-800',
       group: 'personal',
       title: 'Fresh Fruit',
       tools: 'HTML / CSS / JavaScript / Bootstrap 5',
@@ -113,7 +104,6 @@ const Projetcs = () => {
     {
       code: 'fashionLanding',
       img: fashionLanding,
-      // bgColor: 'gray-800',
       group: 'personal',
       title: 'Fashion Landing',
       tools: 'HTML / CSS / JavaScript / Bootstrap 5',
@@ -125,7 +115,6 @@ const Projetcs = () => {
   const [selectedProject, setselectedProject] = useState(null)
 
   const handleClickViewMoreProject = (projectCode) => {
-    console.log({ projectCode })
     setshowModalProject(true)
     setselectedProject(projetcs.filter((project) => project.code === projectCode)[0])
   }
@@ -155,9 +144,6 @@ const Projetcs = () => {
     )
   }
 
-  console.log({ selectedProject })
-  console.log(selectedProject?.subImages?.length)
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -167,23 +153,12 @@ const Projetcs = () => {
       }}
     >
       <div className="container m-auto">
-        {/* <AnimatedText text='Projects' /> */}
-
         <div className="projects-container mb-3 grid xl:grid-cols-3  sm:grid-cols-2 grid-cols-1">
           {projetcs.map((project) => {
-            console.log('IMG', project.img)
             return (
               <div key={project.code} className="project grid-item center bg-[#27272d]">
-                <div >
+                <div>
                   {project?.img && (
-                    // <Image
-                    //   src={project.img}
-                    //   alt='henry timpantuna'
-                    //   // className='w-full h-auto'
-
-                    //   priority
-                    //   className=''
-                    // />
                     <div
                       className="image-bg w-full h-[250px] "
                       style={{ backgroundImage: `url(${project.img.src}) ` }}
@@ -203,26 +178,9 @@ const Projetcs = () => {
                       </div>
                     </div>
                     <div className="content-view-more">
-                      {/* <button
-                    type='button'
-                    className='transition-property: all duration-500 hover:bg-primary hover:text-white'
-                    onClick={() => {
-                      handleClickViewMoreProject(project.code)
-                    }}
-                  >
-                    View more
-                  </button> */}
-                      {/* <ButtonReusable
-                    textButton={'View More '}
-                    onClick={() => {
-                      console.log('first')
-                      handleClickViewMoreProject(project.code)
-                    }}
-                  /> */}
                       <Button
                         variant="primary"
                         onClick={() => {
-                          console.log('first')
                           handleClickViewMoreProject(project.code)
                         }}
                         className="bg-slate-500"
@@ -258,12 +216,6 @@ const Projetcs = () => {
                     selectedProject?.subImages.length > 0 &&
                     selectedProject?.subImages.map((subImage, index) => (
                       <SwiperSlide key={index}>
-                        {/* <Image
-                      src={subImage}
-                      alt='henry timpantuna'
-                      className='w-full h-full'
-                    /> */}
-                        {console.log({ subImage })}
                         <div
                           className="subImage-project"
                           style={{
@@ -296,10 +248,7 @@ const Projetcs = () => {
                 <p className="mb-4">{selectedProject?.info?.description}</p>
 
                 <div className="flex justify-between items-end">
-                  {/* <ButtonReusable
-                  textButton={'VIEW SITE'}
-                  icon={<BsBoxArrowUpRight className='ml-4 mb-[3px]' />}
-                /> */}
+                  
                   <MdClose
                     size={35}
                     color=""
