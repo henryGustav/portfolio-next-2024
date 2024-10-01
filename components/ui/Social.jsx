@@ -16,16 +16,12 @@ const socials = [
     icon: <FaWhatsapp />,
     path: 'https://api.whatsapp.com/send?phone=+593969719186&amp;text=Hola!%20podemos%20conversar%20sobre%20un%20proyecto',
   },
- 
 ]
 
 const Social = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
       {socials.map((social, index) => (
-        // <Link href={social.path} key={index} className={iconStyles}>
-        //   {social.icon}
-        // </Link>
         <a href={social.path} key={index} className={iconStyles} target="_blank">
           {social.icon}
         </a>

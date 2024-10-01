@@ -8,10 +8,9 @@ import { Button } from './ui/button'
 
 const links = [
   { name: 'Home', path: '/' },
-  // { name: 'services', path: '/services' },
   { name: 'Trabajos', path: '/work' },
   { name: 'Experiencia', path: '/resume' },
-  // { name: 'contact', path: '/contact' },
+  { name: 'contact', path: '/contact' },
 ]
 const MobileNav = () => {
   const pathName = usePathname()

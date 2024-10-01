@@ -8,6 +8,7 @@ import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Tooltip, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { TooltipContent } from '@radix-ui/react-tooltip'
+
 const about = {
   title: 'Acerca de mí',
   description: `Soy una persona apasionada por la tecnología y el aprendizaje continuo. 
@@ -117,8 +118,7 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="w-full text-white/60 mx-auto xl:mx-0">{education.description}</p>
 
-                <ScrollArea className="h-[400px]">
-                  {/* titulo profesional */}
+                <ScrollArea className="h-[400px] ">
                   <h3>Titulo profesional</h3>
                   <li
                     className="bg-[#27272d] h-[184px] py-6 px-10 rounded-xl
@@ -134,7 +134,7 @@ const Resume = () => {
                       <p className="text-white/60">{'Universidad Central del Ecuador'}</p>
                     </div>
                   </li>
-                  <h3 className='mt-4'>Cursos terminados</h3>
+                  <h3 className="mt-4">Cursos terminados</h3>
 
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((itemEducation, index) => (
