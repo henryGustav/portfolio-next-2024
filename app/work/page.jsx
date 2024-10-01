@@ -34,6 +34,7 @@ import tecnomegaAdminSubImg2 from '../../public/assets/projects/tecnomegaAdmin/t
 import tecnomegaAdminSubImg3 from '../../public/assets/projects/tecnomegaAdmin/tecnomegaAdminSubImg3.png'
 import tecnomegaAdminSubImg4 from '../../public/assets/projects/tecnomegaAdmin/tecnomegaAdminSubImg4.png'
 import { Button } from '@/components/ui/button'
+import {motion} from 'framer-motion'
 // import ButtonReusable from '../components/ButtonReusable'
 const Projetcs = () => {
   const projetcs = [
@@ -158,44 +159,51 @@ const Projetcs = () => {
   console.log(selectedProject?.subImages?.length)
 
   return (
-    <div className="container m-auto">
-      {/* <AnimatedText text='Projects' /> */}
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 1.5, duration: 0.4, ease: 'easeIn' },
+      }}
+    >
+      <div className="container m-auto">
+        {/* <AnimatedText text='Projects' /> */}
 
-      <div className="projects-container mb-3">
-        {projetcs.map((project) => {
-          console.log('IMG', project.img)
-          return (
-            <div key={project.code} className="project">
-              <div className={`image-project`}>
-                {project?.img && (
-                  // <Image
-                  //   src={project.img}
-                  //   alt='henry timpantuna'
-                  //   // className='w-full h-auto'
+        <div className="projects-container mb-3 grid xl:grid-cols-3  sm:grid-cols-2 grid-cols-1">
+          {projetcs.map((project) => {
+            console.log('IMG', project.img)
+            return (
+              <div key={project.code} className="project grid-item center bg-[#27272d]">
+                <div >
+                  {project?.img && (
+                    // <Image
+                    //   src={project.img}
+                    //   alt='henry timpantuna'
+                    //   // className='w-full h-auto'
 
-                  //   priority
-                  //   className=''
-                  // />
-                  <div
-                    className="image-bg w-[300px] h-[250px]"
-                    style={{ backgroundImage: `url(${project.img.src}) ` }}
-                  ></div>
-                )}
-              </div>
-              <div className="project-content">
-                <div className="content">
-                  <div className="content-info z-10">
-                    <div className="title mb-3 ">
-                      <h1 className="font-semibold text-white text-2xl">{project.title}</h1>
-                    </div>
-                    <div>
-                      <div className="project-tools text-white/60">
-                        <p>{project?.tools || ''}</p>
+                    //   priority
+                    //   className=''
+                    // />
+                    <div
+                      className="image-bg w-full h-[250px] "
+                      style={{ backgroundImage: `url(${project.img.src}) ` }}
+                    ></div>
+                  )}
+                </div>
+                <div className="project-content">
+                  <div className="content">
+                    <div className="content-info z-10">
+                      <div className="title mb-3 ">
+                        <h1 className="font-semibold text-white text-2xl">{project.title}</h1>
+                      </div>
+                      <div>
+                        <div className="project-tools text-white/60">
+                          <p>{project?.tools || ''}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="content-view-more">
-                    {/* <button
+                    <div className="content-view-more">
+                      {/* <button
                     type='button'
                     className='transition-property: all duration-500 hover:bg-primary hover:text-white'
                     onClick={() => {
@@ -204,106 +212,107 @@ const Projetcs = () => {
                   >
                     View more
                   </button> */}
-                    {/* <ButtonReusable
+                      {/* <ButtonReusable
                     textButton={'View More '}
                     onClick={() => {
                       console.log('first')
                       handleClickViewMoreProject(project.code)
                     }}
                   /> */}
-                    <Button
-                      variant="primary"
-                      onClick={() => {
-                        console.log('first')
-                        handleClickViewMoreProject(project.code)
-                      }}
-                      className='bg-slate-500'
-                    >
-                      VIEW MORE
-                    </Button>
+                      <Button
+                        variant="primary"
+                        onClick={() => {
+                          console.log('first')
+                          handleClickViewMoreProject(project.code)
+                        }}
+                        className="bg-slate-500"
+                      >
+                        VIEW MORE
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )
-        })}
-      </div>
+            )
+          })}
+        </div>
 
-      <Dialog
-        // header='Header'
-        visible={showModalProject}
-        style={{ width: '50vw' }}
-        // footer={renderFooter('displayBasic')}
-        onHide={() => setshowModalProject(false)}
-        className="modal-project"
-      >
-        {selectedProject && (
-          <>
-            <div className="images-per-project relative">
-              <Swiper
-                spaceBetween={100}
-                slidesPerView={1}
-                onSlideChange={(e) => {}}
-                onSwiper={(swiper1) => console.log(swiper1)}
-              >
-                {selectedProject?.subImages &&
-                  selectedProject?.subImages.length > 0 &&
-                  selectedProject?.subImages.map((subImage, index) => (
-                    <SwiperSlide key={index}>
-                      {/* <Image
+        <Dialog
+          // header='Header'
+          visible={showModalProject}
+          style={{ width: '50vw' }}
+          // footer={renderFooter('displayBasic')}
+          onHide={() => setshowModalProject(false)}
+          className="modal-project"
+        >
+          {selectedProject && (
+            <>
+              <div className="images-per-project relative">
+                <Swiper
+                  spaceBetween={100}
+                  slidesPerView={1}
+                  onSlideChange={(e) => {}}
+                  onSwiper={(swiper1) => console.log(swiper1)}
+                >
+                  {selectedProject?.subImages &&
+                    selectedProject?.subImages.length > 0 &&
+                    selectedProject?.subImages.map((subImage, index) => (
+                      <SwiperSlide key={index}>
+                        {/* <Image
                       src={subImage}
                       alt='henry timpantuna'
                       className='w-full h-full'
                     /> */}
-                      {console.log({ subImage })}
-                      <div
-                        className="subImage-project"
-                        style={{
-                          backgroundImage: `url(${subImage.src})`,
-                          backgroundRepeat: 'no-repeat',
-                          backgroundSize: '100% 100%',
-                          width: '700px',
-                          height: '450px',
-                        }}
-                      ></div>
-                    </SwiperSlide>
-                  ))}
+                        {console.log({ subImage })}
+                        <div
+                          className="subImage-project"
+                          style={{
+                            backgroundImage: `url(${subImage.src})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: '100% 100%',
+                            width: '700px',
+                            height: '450px',
+                          }}
+                        ></div>
+                      </SwiperSlide>
+                    ))}
 
-                <div className="buttons-prev-next flex justify-between absolute">
-                  <SwiperButtonPrev>
-                    <FaChevronLeft color={'white'} size={40} />
-                  </SwiperButtonPrev>
-                  <SwiperButtonNext>
-                    <FaChevronRight color={'white'} size={40} />
-                  </SwiperButtonNext>
-                </div>
-              </Swiper>
-            </div>
-            <div className="info-container-project m-8">
-              <div className="title">
-                <h2 className="main-title">{selectedProject?.info?.mainTitle}</h2>
-                <h3 className="secondary-title">{selectedProject?.info?.secondaryTitle}</h3>
+                  <div className="buttons-prev-next flex justify-between absolute">
+                    <SwiperButtonPrev>
+                      <FaChevronLeft color={'white'} size={40} />
+                    </SwiperButtonPrev>
+                    <SwiperButtonNext>
+                      <FaChevronRight color={'white'} size={40} />
+                    </SwiperButtonNext>
+                  </div>
+                </Swiper>
               </div>
-              <hr className="my-4" />
-              <p className="mb-4">{selectedProject?.info?.description}</p>
+              <div className="info-container-project m-8">
+                <div className="title">
+                  <h2 className="main-title">{selectedProject?.info?.mainTitle}</h2>
+                  <h3 className="secondary-title">{selectedProject?.info?.secondaryTitle}</h3>
+                </div>
+                <hr className="my-4" />
+                <p className="mb-4">{selectedProject?.info?.description}</p>
 
-              <div className="flex justify-between items-end">
-                {/* <ButtonReusable
+                <div className="flex justify-between items-end">
+                  {/* <ButtonReusable
                   textButton={'VIEW SITE'}
                   icon={<BsBoxArrowUpRight className='ml-4 mb-[3px]' />}
                 /> */}
-                <MdClose
-                  size={35}
-                  color=""
-                  className="text-dark/30 cursor-pointer"
-                  onClick={() => setshowModalProject(false)}
-                />
+                  <MdClose
+                    size={35}
+                    color=""
+                    className="text-dark/30 cursor-pointer"
+                    onClick={() => setshowModalProject(false)}
+                  />
+                </div>
               </div>
-            </div>
-          </>
-        )}
-      </Dialog>
-    </div>
+            </>
+          )}
+        </Dialog>
+      </div>
+    </motion.section>
   )
 }
 
