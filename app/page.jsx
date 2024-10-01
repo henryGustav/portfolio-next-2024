@@ -12,21 +12,21 @@ const Home = () => {
         "
         >
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span>SOftware developer</span>
+            <span>Desarrollador de software</span>
             <h1 className="h1">
-              Hello im <br />
-              <span className="text-accent">Henry</span>
+              <span className="h2">Hola mi nombre es</span> <br />
+              <span className="text-accent">Henry Tipantuña</span>
             </h1>
 
-            <p className="mb-9 text-white/80">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae mollitia, velit ipsam amet magnam ipsa
-              officiis. Molestiae ab recusandae iste possimus voluptatibus distinctio similique dolorem harum soluta,
-              alias, natus sapiente.
+            <p className="my-8 text-white/80">
+              Desarrollador con más de 4 años de experiencia en la construcción de sitios web. Además de asegurar la
+              entrega de código de calidad, me enfoco en la mejora continua del producto, aportando perspectivas
+              críticas orientadas a la funcionalidad y los objetivos del negocio.
             </p>
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span>Download CV</span>
+                <span>Descargar CV</span>
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">

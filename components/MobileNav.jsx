@@ -4,13 +4,14 @@ import React from 'react'
 import { CiMenuFries } from 'react-icons/ci'
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet'
 import Link from 'next/link'
+import { Button } from './ui/button'
 
 const links = [
-  { name: 'home', path: '/' },
-  { name: 'services', path: '/services' },
-  { name: 'resume', path: '/resume' },
-  { name: 'work', path: '/work' },
-  { name: 'contact', path: '/contact' },
+  { name: 'Home', path: '/' },
+  // { name: 'services', path: '/services' },
+  { name: 'Trabajos', path: '/work' },
+  { name: 'Experiencia', path: '/resume' },
+  // { name: 'contact', path: '/contact' },
 ]
 const MobileNav = () => {
   const pathName = usePathname()
@@ -24,7 +25,7 @@ const MobileNav = () => {
           <SheetClose asChild>
             <Link href={'/'}>
               <h1 className="text-4xl font-semibold">
-                Luke<span className="text-accent">.</span>
+                HT<span className="text-accent">.</span>
               </h1>
             </Link>
           </SheetClose>
@@ -45,6 +46,12 @@ const MobileNav = () => {
             )
           })}
         </nav>
+        <div className="flex items-center gap-8 justify-center mt-4">
+          
+          <Link href={'/contact'}>
+            <Button>Contacto</Button>
+          </Link>
+        </div>
       </SheetContent>
     </Sheet>
   )

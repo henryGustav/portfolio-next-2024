@@ -3,10 +3,14 @@
   grid-template-columns: repeat(auto-fit, minmax(390px, 1fr)); */
   /* margin: 0 auto; */
   /* gap: 2rem; */
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
   justify-content: center;
   gap: 1rem;
+}
+
+.grid-container > :nth-last-child(-n + 3) {
+  justify-self: center;
 }
 
 .projects-container img {
@@ -19,18 +23,6 @@
   /* flex: 0 0 calc(27.66% - 20px); */
   color: white;
   position: relative;
-}
-
-@media (max-width: 768px) {
-  .project {
-    flex: 0 0 calc(47.66% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .project {
-    flex: unset;
-  }
 }
 
 .project-content {
@@ -162,6 +154,11 @@
   background-size: contain;
   /* background-attachment: fixed; */
   background-position: center;
+  /* opacity: 0.5; */
+  opacity: 1;
+
+  background-color: #27272d !important;
+  transition: all ease-in-out 0.3s;
 }
 .image-bg::before {
   content: '';
@@ -171,12 +168,14 @@
   width: 100%;
   height: 100%;
   /* background-color: theme('colors.secondary'); */
-  background-color: #27272d;
-  opacity: 0.5;
+  /* background-color: #27272d !important; */
+  /* opacity: 0.5; */
   z-index: -1;
+  transition: all ease-in-out 0.3s;
 }
 
 .project:hover .image-bg::before {
   background-color: theme('colors.primary');
   opacity: 0.9;
+  transition: all ease-in-out 0.3s;
 }
