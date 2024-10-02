@@ -84,10 +84,7 @@
   justify-content: center;
 }
 
-.content-view-more button {
-  border: 3px solid theme('colors.primary');
-  padding: 0.5rem 1rem;
-}
+
 
 .modal-project .p-dialog-header {
   display: none;
