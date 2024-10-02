@@ -1,8 +1,13 @@
+'use client'
 import Photo from '@/components/Photo'
 import Social from '@/components/ui/Social'
 import { Button } from '@/components/ui/button'
 import { FiDownload } from 'react-icons/fi'
 const Home = () => {
+  const handleViewResume = () => {
+    const pdfUrl = '/assets/files/HenryTipantuna_Resume.pdf'
+    window.open(pdfUrl, '_blank')
+  }
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -25,10 +30,16 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span>Descargar CV</span>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={handleViewResume}
+                className="uppercase flex items-center gap-2"
+              >
+                <span>View resume</span>
                 <FiDownload className="text-xl" />
               </Button>
+
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles={'flex gap-6'}
