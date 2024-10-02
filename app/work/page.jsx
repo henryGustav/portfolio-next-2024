@@ -177,17 +177,19 @@ const Projetcs = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="content-view-more">
+                    {/* <div className="content-view-more">
                       <Button
                         variant="primary"
                         onClick={() => {
                           handleClickViewMoreProject(project.code)
                         }}
-                        className="bg-slate-500"
+                        className="text-accent bg-transparent  border border-accent
+                        hover:bg-accent hover:text-primary
+                        "
                       >
-                        VIEW MORE
+                        View More
                       </Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -248,7 +250,6 @@ const Projetcs = () => {
                 <p className="mb-4">{selectedProject?.info?.description}</p>
 
                 <div className="flex justify-between items-end">
-                  
                   <MdClose
                     size={35}
                     color=""

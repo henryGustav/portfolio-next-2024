@@ -19,7 +19,7 @@ const about = {
   info: [
     { fieldName: 'Nombre', fieldValue: 'Henry Tipnatuña' },
     { fieldName: 'Email', fieldValue: 'henry_gustavo18@hotmail.com' },
-    { fieldName: 'Phone', fieldValue: '(+593) 969719186' },
+    { fieldName: 'Teléfono', fieldValue: '(+593) 969719186' },
     { fieldName: 'Experiencia', fieldValue: '4+ Years' },
     { fieldName: 'Residencia', fieldValue: 'Quito - Ecuador' },
     { fieldName: 'Freelance', fieldValue: 'Disponible' },
