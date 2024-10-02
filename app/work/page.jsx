@@ -177,7 +177,7 @@ const Projetcs = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="content-view-more">
+                    {/* <div className="content-view-more">
                       <Button
                         variant="primary"
                         onClick={() => {
@@ -189,7 +189,7 @@ const Projetcs = () => {
                       >
                         View More
                       </Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
