@@ -35,8 +35,9 @@ const Home = () => {
                 size="lg"
                 onClick={handleViewResume}
                 className="uppercase flex items-center gap-2"
+                
               >
-                <span>View resume</span>
+                <span>Resume (CV)</span>
                 <FiDownload className="text-xl" />
               </Button>
 
