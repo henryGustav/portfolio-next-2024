@@ -144,6 +144,8 @@ const Projetcs = () => {
     )
   }
 
+  //TODO agregar enlaces a github y al sitio web
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -186,8 +188,9 @@ const Projetcs = () => {
                         className="text-accent bg-transparent  border border-accent
                         hover:bg-accent hover:text-primary
                         "
+                        aria-label="ver más"
                       >
-                        View More
+                        Ver más
                       </Button>
                     </div> */}
                   </div>

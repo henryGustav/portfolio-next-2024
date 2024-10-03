@@ -35,7 +35,6 @@ const MobileNav = () => {
               <SheetClose asChild key={index}>
                 <Link
                   href={link.path}
-                  
                   className={`${link.path === pathName && 'text-accent border-b-2 border-accent'} 
                 text-xl capitalize hover:text-accent transition-all`}
                 >
@@ -45,12 +44,12 @@ const MobileNav = () => {
             )
           })}
         </nav>
-        <div className="flex items-center gap-8 justify-center mt-4">
+        {/* <div className="flex items-center gap-8 justify-center mt-4">
           
           <Link href={'/contact'}>
             <Button>Contacto</Button>
           </Link>
-        </div>
+        </div> */}
       </SheetContent>
     </Sheet>
   )

@@ -1,13 +1,12 @@
 'use client'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { TabsContent } from '@radix-ui/react-tabs'
-import { easeInOut, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import React from 'react'
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaNode } from 'react-icons/fa'
-import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
+
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { Tooltip, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { TooltipContent } from '@radix-ui/react-tooltip'
+
+import Skills from '@/components/skills/Skills'
 
 const about = {
   title: 'Acerca de mí',
@@ -48,27 +47,37 @@ const education = {
     cursos especializados. Esta combinación de estudios formales y aprendizaje continuo me permite enfrentar 
      con éxito los desafíos de la industria tecnológica.`,
   items: [
-    { institution: 'Dev talles', degree: 'Nest js', duration: '2022 - Present' },
-    { institution: 'Udemy', degree: 'React js', duration: '2022 - Present' },
-    { institution: 'Udemy', degree: 'Css professional ', duration: '2022 - Present' },
-    { institution: 'Udemy', degree: 'Git control versions', duration: '2022 - Present' },
-    { institution: 'CEC', degree: 'Java 1.8', duration: '2022 - Present' },
+    { institution: 'Dev talles', degree: 'Nest js', duration: '2023 - 2024', link: '' },
+    {
+      institution: 'Udemy',
+      degree: 'TypeScript',
+      duration: '2023 - 2019',
+      link: 'https://www.udemy.com/certificate/UC-db514c28-db7d-46e2-b93c-13a1e60d7552/',
+    },
+    { institution: 'Udemy', degree: 'Css professional ', duration: '2022 - 2022', link: '' },
+
+    {
+      institution: 'Udemy',
+      degree: 'Docker',
+      duration: '2021 - 2021',
+      link: 'https://www.udemy.com/certificate/UC-f9471a03-590b-4417-9fc6-9eb8e36fe80b/',
+    },
+    {
+      institution: 'Udemy',
+      degree: 'React js',
+      duration: '2021 - 2021',
+      link: 'https://www.udemy.com/certificate/UC-dfd0bb19-33a6-49cf-9263-c87a3cc6d5ea/',
+    },
+    {
+      institution: 'Udemy',
+      degree: 'Git control versions',
+      duration: '2020 - 2020',
+      link: 'https://www.udemy.com/certificate/UC-c5a21d25-9be1-4ab0-b82b-bb2444a18a1d/',
+    },
+    { institution: 'CEC', degree: 'Java 1.8', duration: '2018 - 2019', link: '' },
   ],
 }
 
-const skills = {
-  title: 'Habilidades',
-  description: `Mi conjunto de habilidades abarca desde el frontend hasta el backend, lo que me permite ofrecer soluciones completas y de calidad en cada etapa del desarrollo.`,
-  skillList: [
-    { icon: <FaHtml5 />, name: 'Html5' },
-    { icon: <FaCss3 />, name: 'Css3' },
-    { icon: <FaJs />, name: 'Javascript' },
-    { icon: <FaReact />, name: 'React.js' },
-    { icon: <FaNode />, name: 'Node.js' },
-    { icon: <SiNextdotjs />, name: 'Next.js' },
-    { icon: <SiTailwindcss />, name: 'Taildwind Css' },
-  ],
-}
 const Resume = () => {
   return (
     <motion.div
@@ -125,7 +134,7 @@ const Resume = () => {
                       flex flex-col justify-center items-center lg:items-start gap-1
                       "
                   >
-                    <span className="text-accent">2012-2018</span>
+                    {/* <span className="text-accent">2012-2018</span> */}
                     <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                       Ingeniero informático
                     </h3>
@@ -158,39 +167,8 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
-            {/* TODO categorizar las skills (font - back - etc) */}
             <TabsContent value="skills" className="w-full">
-              <div className="flex flex-col gap-[30px] mb-8">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w=[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
-                </div>
-              </div>
-              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                {skills.skillList.map((skill, index) => (
-                  <li key={index}>
-                    <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger
-                          className="w-full h-[150px] bg-[#232329] rounded-xl flex
-                        justify-center items-center
-                        "
-                        >
-                          <div
-                            className="text-6xl hover:!text-accent hover:transition-all 
-                          hover:duration-300"
-                          >
-                            {skill.icon}
-                          </div>
-                        </TooltipTrigger>
-                        <TooltipContent className="bg-white/80 w-full px-4 rounded-[5px] text-primary">
-                          <p>{skill.name}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </li>
-                ))}
-              </ul>
+              <Skills />
             </TabsContent>
 
             <TabsContent value="about" className="w-full">
