@@ -40,7 +40,7 @@ const Contact = () => {
                     {infoList.map((info, index) => (
                       <li key={index} className="flex gap-8 items-center mt-4 w-full">
                         <div
-                          className="text-accent bg-[#27272c] rounded-md w-[52px] h-[52px]
+                          className="text-accent bg-[#27272c] rounded-md min-w-[52px] h-[52px]
                     flex items-center justify-center"
                         >
                           <div className="text-[28px]">{info.icon}</div>
@@ -48,7 +48,7 @@ const Contact = () => {
 
                         <div className="">
                           <p className="text-white/60">{info.title}</p>
-                          <h3 className="md:text-xl w-full break-all ">{info.description}</h3>
+                          <h3 className="md:text-lg w-full break-all ">{info.description}</h3>
                         </div>
                       </li>
                     ))}
