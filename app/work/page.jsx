@@ -7,10 +7,9 @@ import landindgApp from '../../public/assets/projects/landindgApp.png'
 import jornalApp from '../../public/assets/projects/jornalApp.png'
 import freshFruitApp from '../../public/assets/projects/freshFruitApp.png'
 import fashionLanding from '../../public/assets/projects/fashionLanding.png'
-import Image from 'next/image'
 import { Dialog } from 'primereact/dialog'
 
-import './projects.css'
+import './work.css'
 import { useState } from 'react'
 
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
@@ -28,7 +27,6 @@ import tecnomegaAdminSubImg1 from '../../public/assets/projects/tecnomegaAdmin/t
 import tecnomegaAdminSubImg2 from '../../public/assets/projects/tecnomegaAdmin/tecnomegaAdminSubImg2.png'
 import tecnomegaAdminSubImg3 from '../../public/assets/projects/tecnomegaAdmin/tecnomegaAdminSubImg3.png'
 import tecnomegaAdminSubImg4 from '../../public/assets/projects/tecnomegaAdmin/tecnomegaAdminSubImg4.png'
-import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 const Projetcs = () => {
   const projetcs = [
@@ -119,7 +117,7 @@ const Projetcs = () => {
     setselectedProject(projetcs.filter((project) => project.code === projectCode)[0])
   }
 
-  const swiper = useSwiper()
+  // const swiper = useSwiper()
 
   const SwiperButtonNext = ({ children }) => {
     const swiper = useSwiper()
@@ -214,7 +212,7 @@ const Projetcs = () => {
                 <Swiper
                   spaceBetween={100}
                   slidesPerView={1}
-                  onSlideChange={(e) => {}}
+                  // onSlideChange={(e) => {}}
                   onSwiper={(swiper1) => console.log(swiper1)}
                 >
                   {selectedProject?.subImages &&

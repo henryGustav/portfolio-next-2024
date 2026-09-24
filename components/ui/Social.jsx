@@ -1,7 +1,6 @@
-import Link from 'next/link'
 import React from 'react'
 
-import { FaGithub, FaLinkedin, FaYoutube, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 
 const socials = [
   {
@@ -25,7 +24,7 @@ const Social = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
       {socials.map((social, index) => (
-        <a href={social.path} key={index} className={iconStyles} target="_blank" alt={social.alt}>
+        <a href={social.path} key={index} className={iconStyles} target="_blank" alt={social.alt} rel="noreferrer">
           {social.icon}
         </a>
       ))}
