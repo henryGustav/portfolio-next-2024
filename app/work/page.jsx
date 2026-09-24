@@ -34,24 +34,29 @@ const Projetcs = () => {
       code: 'tecnomegaEcommerce',
       img: tecnomegaEcommerce,
       bgColor: 'bg-secondary',
-      group: 'enterprice',
-      title: 'Tecnomega Ecommerce',
-      tools: 'React / NodeJs / MongoDB / Git',
+      group: 'enterprise',
+      title: 'Tecnomega E-commerce',
+      tools: 'React / Node.js / MongoDB / Git',
       info: {
-        mainTitle: 'Tecnomega info',
-        secondaryTitle: 'ECOMMERCE',
+        mainTitle: 'Tecnomega E-commerce',
+        secondaryTitle: 'E-COMMERCE',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi saepe distinctio pariatur modi eveniet magni, ad fugit esse dolorem cum, vero fugiat, ipsam soluta temporibus quis doloremque molestiae similique. Sunt.',
+          'Plataforma e-commerce para la venta de productos tecnológicos. Frontend en React, backend en Node.js con MongoDB, enfocada en una experiencia de compra fluida, gestión de catálogo y pedidos.',
       },
       subImages: [tecnomegaSubImg1, tecnomegaSubImg2, tecnomegaSubImg3, tecnomegaSubImg4],
     },
     {
       code: 'tecnomegaLandidng',
       img: tecnomegaLanding,
-      group: 'enterprice',
-      title: 'Tecnomega Enterprice',
-      tools: 'React / NodeJs / MySQL / Git',
-      info: 'Tecnomega landing info',
+      group: 'enterprise',
+      title: 'Tecnomega Enterprise',
+      tools: 'React / Node.js / MySQL / Git',
+      info: {
+        mainTitle: 'Tecnomega Enterprise',
+        secondaryTitle: 'SITIO CORPORATIVO',
+        description:
+          'Sitio corporativo que presenta productos y servicios de la empresa, con administración de contenido y estructura optimizada para el posicionamiento web.',
+      },
       subImages: [tecnomegaAdminSubImg1, tecnomegaAdminSubImg2, tecnomegaAdminSubImg3, tecnomegaAdminSubImg4],
     },
 
@@ -59,28 +64,43 @@ const Projetcs = () => {
       code: 'quasadLanding',
       img: quasad,
       bgColor: 'bg-gray-800',
-      group: 'enterprice',
+      group: 'enterprise',
       title: 'Quasad',
-      tools: 'React / NodeJs / MongoDB / Git',
-      info: 'quasad info',
+      tools: 'React / Node.js / MongoDB / Git',
+      info: {
+        mainTitle: 'Quasad',
+        secondaryTitle: 'LANDING PAGE',
+        description:
+          'Landing page para Quasad, con diseño atractivo, información clara de servicios y formularios de contacto funcionales.',
+      },
     },
     {
       code: 'easyboxEcommerce',
       img: easyboxEcommerce,
       bgColor: 'bg-primary',
-      group: 'enterprice',
-      title: 'Easybox Ecommerce',
+      group: 'enterprise',
+      title: 'Easybox E-commerce',
       tools: 'Angular / Java / EJB 3 / Git',
-      info: 'easybox info',
+      info: {
+        mainTitle: 'Easybox E-commerce',
+        secondaryTitle: 'E-COMMERCE',
+        description:
+          'E-commerce desarrollado con Angular en el frontend y Java con EJB 3 en el backend, orientado a escenarios empresariales.',
+      },
     },
 
     {
       code: 'journalApp',
       img: jornalApp,
       group: 'personal',
-      title: 'Joaunal App',
-      tools: 'React / Firebase / JavaScrpt / Cloudinary / SASS / Redux',
-      info: 'Journal info',
+      title: 'Journal App',
+      tools: 'React / Firebase / JavaScript / Cloudinary / SASS / Redux',
+      info: {
+        mainTitle: 'Journal App',
+        secondaryTitle: 'APP WEB',
+        description:
+          'Aplicación personal tipo diario con autenticación, registro de notas y carga de imágenes mediante Firebase y Cloudinary.',
+      },
     },
     {
       code: 'landingApp',
@@ -88,7 +108,12 @@ const Projetcs = () => {
       group: 'personal',
       title: 'Landing App',
       tools: 'HTML / CSS / JavaScript / Bootstrap 5',
-      info: 'Landing info',
+      info: {
+        mainTitle: 'Landing App',
+        secondaryTitle: 'LANDING PAGE',
+        description:
+          'Landing page responsive construida con HTML, CSS y Bootstrap para presentar un producto digital.',
+      },
     },
 
     {
@@ -97,7 +122,12 @@ const Projetcs = () => {
       group: 'personal',
       title: 'Fresh Fruit',
       tools: 'HTML / CSS / JavaScript / Bootstrap 5',
-      info: 'fruit info',
+      info: {
+        mainTitle: 'Fresh Fruit',
+        secondaryTitle: 'SITIO WEB',
+        description:
+          'Sitio web para distribución de frutas con catálogo de productos, responsive y optimizado para consulta móvil.',
+      },
     },
     {
       code: 'fashionLanding',
@@ -105,7 +135,12 @@ const Projetcs = () => {
       group: 'personal',
       title: 'Fashion Landing',
       tools: 'HTML / CSS / JavaScript / Bootstrap 5',
-      info: 'fashion info',
+      info: {
+        mainTitle: 'Fashion Landing',
+        secondaryTitle: 'LANDING PAGE',
+        description:
+          'Landing page de moda con visual moderna, galería de productos y optimización para dispositivos móviles.',
+      },
     },
   ]
 

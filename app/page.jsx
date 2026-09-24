@@ -19,14 +19,14 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span>Desarrollador de software</span>
             <h1 className="h1">
-              <span className="h2">Hola mi nombre es</span> <br />
+              <span className="h2">Hola, mi nombre es</span> <br />
               <span className="text-accent">Henry Tipantuña</span>
             </h1>
 
             <p className="my-8 text-white/80">
-              Desarrollador con más de 4 años de experiencia en la construcción de sitios web. Además de asegurar la
-              entrega de código de calidad, me enfoco en la mejora continua del producto, aportando perspectivas
-              críticas orientadas a la funcionalidad y los objetivos del negocio.
+              Desarrollador full stack con más de 4 años de experiencia construyendo aplicaciones web de alto impacto.
+              Me enfoco en entregar código limpio y escalable y en la mejora continua del producto, aportando
+              soluciones orientadas a la funcionalidad y a los objetivos del negocio.
             </p>
 
             <div className="flex flex-col xl:flex-row items-center gap-8">

@@ -15,7 +15,7 @@ const socials = [
   },
   {
     icon: <FaWhatsapp />,
-    path: 'https://api.whatsapp.com/send?phone=+593969719186&amp;text=Hola!%20podemos%20conversar%20sobre%20un%20proyecto',
+    path: 'https://api.whatsapp.com/send?phone=+593969719186&text=Hola!%20podemos%20conversar%20sobre%20un%20proyecto',
     alt: 'whatsapp',
   },
 ]

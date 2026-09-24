@@ -3,10 +3,10 @@
 import { FaMapMarkedAlt, FaWhatsapp, FaLinkedin, FaMailBulk } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 const infoList = [
-  { icon: <FaWhatsapp />, title: 'Whatsapp', description: '0969719186' },
+  { icon: <FaWhatsapp />, title: 'WhatsApp', description: '0969719186' },
   { icon: <FaMailBulk />, title: 'Email', description: 'henry_gustavo18@hotmail.com' },
   { icon: <FaLinkedin />, title: 'LinkedIn', description: 'https://www.linkedin.com/in/henry-tipantuna/' },
-  { icon: <FaMapMarkedAlt />, title: 'Sector', description: 'Pichincha - Quito' },
+  { icon: <FaMapMarkedAlt />, title: 'Ubicación', description: 'Quito, Ecuador' },
 ]
 const Contact = () => {
   return (
@@ -24,8 +24,10 @@ const Contact = () => {
             "
           >
             <div className="info-container w-full">
-              <h3 className="text-4xl text-accent">Lets work !</h3>
-              <p className="text-white/60 mt-8">Podemos establecer conversación, con gusto responderé tus preguntas.</p>
+              <h3 className="text-4xl text-accent">¡Trabajemos juntos!</h3>
+              <p className="text-white/60 mt-8">
+                Conversemos sobre tus proyectos: con gusto responderé cualquier inquietud.
+              </p>
 
               <div className="flex w-full mt-12 flex-col md:flex-row gap-8">
                 <div className="w-full flex justify-center items-center lg:flex-row md:order-1 order-3">

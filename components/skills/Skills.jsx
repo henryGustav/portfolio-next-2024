@@ -12,25 +12,25 @@ const skills = {
     // front
     { icon: <FaReact />, name: 'React.js', type: 'front' },
     { icon: <SiNextdotjs />, name: 'Next.js', type: 'front' },
-    { icon: <FaJs />, name: 'Javascript', type: 'front' },
+    { icon: <FaJs />, name: 'JavaScript', type: 'front' },
     { icon: <FaAngular />, name: 'Angular', type: 'front' },
-    { icon: <SiTailwindcss />, name: 'Taildwind Css', type: 'front' },
-    { icon: <FaHtml5 />, name: 'Html5', type: 'front' },
-    { icon: <FaCss3 />, name: 'Css3', type: 'front' },
-    { icon: <FaBootstrap />, name: 'Css3', type: 'front' },
+    { icon: <SiTailwindcss />, name: 'Tailwind CSS', type: 'front' },
+    { icon: <FaHtml5 />, name: 'HTML5', type: 'front' },
+    { icon: <FaCss3 />, name: 'CSS3', type: 'front' },
+    { icon: <FaBootstrap />, name: 'Bootstrap', type: 'front' },
 
     // back
     { icon: <FaNode />, name: 'Node.js', type: 'back' },
     { icon: <SiNestjs />, name: 'Nest.js', type: 'back' },
     { icon: <FaJava />, name: 'Java', type: 'back' },
-    { icon: <SiMysql />, name: 'MySql', type: 'back' },
-    { icon: <SiMongodb />, name: 'MongoDb', type: 'back' },
+    { icon: <SiMysql />, name: 'MySQL', type: 'back' },
+    { icon: <SiMongodb />, name: 'MongoDB', type: 'back' },
     { icon: <PiFileSql />, name: 'SQL', type: 'back' },
 
     // tools
     { icon: <FaGit />, name: 'Git', type: 'tool' },
-    { icon: <FaDocker />, name: 'Docekr', type: 'tool' },
-    { icon: <SiVisualstudio />, name: 'VsCode', type: 'tool' },
+    { icon: <FaDocker />, name: 'Docker', type: 'tool' },
+    { icon: <SiVisualstudio />, name: 'VS Code', type: 'tool' },
     { icon: <SiPostman />, name: 'Postman', type: 'tool' },
   ],
 }
@@ -82,10 +82,10 @@ const Skills = () => {
         </div>
       </div>
 
-      <h3 className="text-lg">Front - end</h3>
+      <h3 className="text-lg">Front-end</h3>
       <div>{getSkills(skillsFront)}</div>
       <div className="mt-8">
-        <h3 className="text-lg">Back - end</h3>
+        <h3 className="text-lg">Back-end</h3>
         {getSkills(skillsBack)}
       </div>
       <div className="mt-8">
