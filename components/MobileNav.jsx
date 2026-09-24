@@ -4,7 +4,6 @@ import React from 'react'
 import { CiMenuFries } from 'react-icons/ci'
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet'
 import Link from 'next/link'
-import { Button } from './ui/button'
 
 const links = [
   { name: 'Home', path: '/' },
