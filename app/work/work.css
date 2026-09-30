@@ -1,0 +1,57 @@
+.modal-project .p-dialog-header {
+  display: none;
+}
+
+.p-dialog .p-dialog-content:last-of-type {
+  border-radius: 0px !important;
+}
+
+.p-dialog .p-dialog-content {
+  padding: 0;
+}
+
+.modal-project .p-dialog-content {
+  overflow: hidden;
+  background-color: #1c1c22;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 20;
+  display: grid;
+  height: 40px;
+  width: 40px;
+  place-items: center;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(0, 225, 135, 0.8);
+}
+
+.swiper-nav-btn {
+  display: grid;
+  height: 44px;
+  width: 44px;
+  place-items: center;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.swiper-nav-btn:hover {
+  background: rgba(0, 225, 135, 0.8);
+}
+
+@media (max-width: 640px) {
+  .swiper-nav-btn {
+    height: 36px;
+    width: 36px;
+  }
+}

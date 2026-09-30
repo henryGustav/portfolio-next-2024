@@ -4,13 +4,12 @@ import React from 'react'
 import { CiMenuFries } from 'react-icons/ci'
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet'
 import Link from 'next/link'
-import { Button } from './ui/button'
 
 const links = [
-  { name: 'Home', path: '/' },
+  { name: 'Inicio', path: '/' },
   { name: 'Trabajos', path: '/work' },
   { name: 'Experiencia', path: '/resume' },
-  { name: 'contact', path: '/contact' },
+  { name: 'Contacto', path: '/contact' },
 ]
 const MobileNav = () => {
   const pathName = usePathname()

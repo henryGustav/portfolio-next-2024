@@ -3,10 +3,10 @@
 import { FaMapMarkedAlt, FaWhatsapp, FaLinkedin, FaMailBulk } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 const infoList = [
-  { icon: <FaWhatsapp />, title: 'Whatsapp', description: '0969719186' },
+  { icon: <FaWhatsapp />, title: 'WhatsApp', description: '0969719186' },
   { icon: <FaMailBulk />, title: 'Email', description: 'henry_gustavo18@hotmail.com' },
   { icon: <FaLinkedin />, title: 'LinkedIn', description: 'https://www.linkedin.com/in/henry-tipantuna/' },
-  { icon: <FaMapMarkedAlt />, title: 'Sector', description: 'Pichincha - Quito' },
+  { icon: <FaMapMarkedAlt />, title: 'Ubicación', description: 'Quito, Ecuador' },
 ]
 const Contact = () => {
   return (
@@ -24,8 +24,10 @@ const Contact = () => {
             "
           >
             <div className="info-container w-full">
-              <h3 className="text-4xl text-accent">Lets work !</h3>
-              <p className="text-white/60 mt-8">Podemos establecer conversación, con gusto responderé tus preguntas.</p>
+              <h3 className="text-4xl text-accent">¡Trabajemos juntos!</h3>
+              <p className="text-white/60 mt-8">
+                Conversemos sobre tus proyectos: con gusto responderé cualquier inquietud.
+              </p>
 
               <div className="flex w-full mt-12 flex-col md:flex-row gap-8">
                 <div className="w-full flex justify-center items-center lg:flex-row md:order-1 order-3">
@@ -40,7 +42,7 @@ const Contact = () => {
                     {infoList.map((info, index) => (
                       <li key={index} className="flex gap-8 items-center mt-4 w-full">
                         <div
-                          className="text-accent bg-[#27272c] rounded-md w-[52px] h-[52px]
+                          className="text-accent bg-[#27272c] rounded-md min-w-[52px] h-[52px]
                     flex items-center justify-center"
                         >
                           <div className="text-[28px]">{info.icon}</div>
@@ -48,7 +50,7 @@ const Contact = () => {
 
                         <div className="">
                           <p className="text-white/60">{info.title}</p>
-                          <h3 className="md:text-xl w-full break-all ">{info.description}</h3>
+                          <h3 className="md:text-lg w-full break-all ">{info.description}</h3>
                         </div>
                       </li>
                     ))}
