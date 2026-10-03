@@ -10,7 +10,7 @@ const socials = [
   },
   {
     icon: <FaLinkedin />,
-    path: 'https://www.linkedin.com/in/henry-tipantuna/',
+    path: 'https://www.linkedin.com/in/henrytipantuna/',
     alt: 'linkedin',
   },
   {

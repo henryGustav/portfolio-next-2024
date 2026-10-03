@@ -30,6 +30,10 @@ import tecnomegaAdminSubImg2 from '../../public/assets/projects/tecnomegaAdmin/t
 import tecnomegaAdminSubImg3 from '../../public/assets/projects/tecnomegaAdmin/tecnomegaAdminSubImg3.png'
 import tecnomegaAdminSubImg4 from '../../public/assets/projects/tecnomegaAdmin/tecnomegaAdminSubImg4.png'
 
+import taskHandlerLogin from '../../public/assets/projects/taskHandler/taskHandlerLogin.png'
+import taskHandlerRegistry from '../../public/assets/projects/taskHandler/taskHandlerRegistry.png'
+import taskHandlerDashboard from '../../public/assets/projects/taskHandler/taskHandlerDashboard.png'
+
 const projets = [
   {
     code: 'tecnomegaEcommerce',
@@ -38,7 +42,7 @@ const projets = [
     group: 'enterprise',
     title: 'Tecnomega E-commerce',
     tools: ['React', 'Node.js', 'MongoDB', 'Git'],
-    links: { demo: '', github: '' },
+    links: { demo: 'https://tecnomegastore.ec/', github: '' },
     info: {
       mainTitle: 'Tecnomega E-commerce',
       secondaryTitle: 'E-COMMERCE',
@@ -53,7 +57,7 @@ const projets = [
     group: 'enterprise',
     title: 'Tecnomega Enterprise',
     tools: ['React', 'Node.js', 'MySQL', 'Git'],
-    links: { demo: '', github: '' },
+    links: { demo: 'https://www.tecnomega.com.ec/empresa', github: '' },
     info: {
       mainTitle: 'Tecnomega Enterprise',
       secondaryTitle: 'SITIO CORPORATIVO',
@@ -70,7 +74,7 @@ const projets = [
     group: 'enterprise',
     title: 'Quasad',
     tools: ['React', 'Node.js', 'MongoDB'],
-    links: { demo: '', github: '' },
+    links: { demo: 'https://quasad.tech/', github: '' },
     info: {
       mainTitle: 'Quasad',
       secondaryTitle: 'LANDING PAGE',
@@ -79,19 +83,23 @@ const projets = [
     },
   },
   {
-    code: 'easyboxEcommerce',
-    img: easyboxEcommerce,
-    bgColor: 'bg-primary',
+    code: 'tasks-handler',
+    img: taskHandlerDashboard,
+    bgColor: 'bg-secondary',
     group: 'enterprise',
-    title: 'Easybox E-commerce',
-    tools: ['Angular', 'Java', 'EJB 3'],
-    links: { demo: '', github: '' },
-    info: {
-      mainTitle: 'Easybox E-commerce',
-      secondaryTitle: 'E-COMMERCE',
-      description:
-        'E-commerce desarrollado con Angular en el frontend y Java con EJB 3 en el backend, orientado a escenarios empresariales.',
+    title: 'Task handler',
+    tools: ['Next JS', 'Node.js', 'MongoDB', 'Git'],
+    links: {
+      demo: 'https://journal-appv2-vert.vercel.app/',
+      github: 'https://github.com/next-apps-develop/journal-appv2',
     },
+    info: {
+      mainTitle: 'Tasks handler',
+      secondaryTitle: 'task-handler',
+      description:
+        'Gestor de notas diseñado para digitalizar tus pensamientos, organizar tus proyectos y potenciar tu productividad diaria sin esfuerzo',
+    },
+    subImages: [taskHandlerLogin, taskHandlerRegistry, taskHandlerDashboard],
   },
 
   {
@@ -100,7 +108,7 @@ const projets = [
     group: 'personal',
     title: 'Journal App',
     tools: ['React', 'Firebase', 'Cloudinary', 'Redux', 'SASS'],
-    links: { demo: '', github: '' },
+    links: { demo: 'https://henrygustavo1514.gitlab.io/react-journal-app', github: '' },
     info: {
       mainTitle: 'Journal App',
       secondaryTitle: 'APP WEB',
@@ -114,12 +122,14 @@ const projets = [
     group: 'personal',
     title: 'Landing App',
     tools: ['HTML', 'CSS', 'JavaScript', 'Bootstrap 5'],
-    links: { demo: '', github: '' },
+    links: {
+      demo: 'https://web-landing-page.gitlab.io/landing-shala/',
+      github: 'https://gitlab.com/web-landing-page/landing-shala',
+    },
     info: {
       mainTitle: 'Landing App',
       secondaryTitle: 'LANDING PAGE',
-      description:
-        'Landing page responsive construida con HTML, CSS y Bootstrap para presentar un producto digital.',
+      description: 'Landing page responsive construida con HTML, CSS y Bootstrap para presentar un producto digital.',
     },
   },
 
@@ -129,7 +139,10 @@ const projets = [
     group: 'personal',
     title: 'Fresh Fruit',
     tools: ['HTML', 'CSS', 'JavaScript', 'Bootstrap 5'],
-    links: { demo: '', github: '' },
+    links: {
+      demo: 'https://henrygustavo1514.gitlab.io/landing-page-freshfood',
+      github: 'https://gitlab.com/henryGustavo1514/landing-page-freshfood',
+    },
     info: {
       mainTitle: 'Fresh Fruit',
       secondaryTitle: 'SITIO WEB',
@@ -143,7 +156,10 @@ const projets = [
     group: 'personal',
     title: 'Fashion Landing',
     tools: ['HTML', 'CSS', 'JavaScript', 'Bootstrap 5'],
-    links: { demo: '', github: '' },
+    links: {
+      demo: 'https://henrygustavo1514.gitlab.io/landing-page-fashion',
+      github: 'https://gitlab.com/henryGustavo1514/landing-page-fashion',
+    },
     info: {
       mainTitle: 'Fashion Landing',
       secondaryTitle: 'LANDING PAGE',
@@ -167,11 +183,7 @@ const categoryLabel = {
 const SwiperButtonNext = ({ children }) => {
   const swiper = useSwiper()
   return (
-    <button
-      className="swiper-nav-btn"
-      onClick={() => swiper.slideNext()}
-      aria-label="Siguiente imagen"
-    >
+    <button className="swiper-nav-btn" onClick={() => swiper.slideNext()} aria-label="Siguiente imagen">
       {children}
     </button>
   )
@@ -206,13 +218,13 @@ const Work = () => {
       <div className="container mx-auto">
         <div className="mb-12 text-center xl:text-left">
           <span className="text-sm uppercase tracking-[3px] text-accent">Portafolio</span>
-          <h1 className="h2 mt-2">Proyectos destacados</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-white/60 xl:mx-0">
-            Una selección de aplicaciones y sitios web en los que he trabajado, desde e-commerce y sitios
-            corporativos hasta proyectos personales.
+          <h1 className="mt-2 h2">Proyectos destacados</h1>
+          <p className="max-w-2xl mx-auto mt-4 text-white/60 xl:mx-0">
+            Una selección de aplicaciones y sitios web en los que he trabajado, desde e-commerce y sitios corporativos
+            hasta proyectos personales.
           </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-2 xl:justify-start">
+          <div className="flex flex-wrap justify-center gap-2 mt-8 xl:justify-start">
             {categories.map((category) => (
               <button
                 key={category.value}
@@ -240,20 +252,22 @@ const Work = () => {
             >
               <div className="relative h-[220px] w-full overflow-hidden bg-primary">
                 <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  className="absolute inset-0 transition-transform duration-500 bg-center bg-cover group-hover:scale-110"
                   style={{ backgroundImage: `url(${project.img.src})` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#27272d] via-transparent to-transparent opacity-80" />
-                <span className="absolute left-4 top-4 rounded-full border border-accent/30 bg-primary/70 px-3 py-1 text-xs font-medium uppercase tracking-wider text-accent backdrop-blur">
+                <span className="absolute px-3 py-1 text-xs font-medium tracking-wider uppercase border rounded-full left-4 top-4 border-accent/30 bg-primary/70 text-accent backdrop-blur">
                   {categoryLabel[project.group]}
                 </span>
               </div>
 
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+              <div className="flex flex-col flex-1 p-6">
+                <div className="flex">
+                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                </div>
                 <p className="mt-3 text-sm leading-relaxed text-white/60">{project.tools.join(' / ')}</p>
 
-                <div className="mt-auto flex items-center justify-between pt-6">
+                <div className="flex items-center justify-between pt-6 mt-auto">
                   <Button
                     variant="outline"
                     size="md"
@@ -268,7 +282,7 @@ const Work = () => {
                       <a
                         href={project.links.github}
                         target="_blank"
-                        className="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-white/70 transition-all hover:border-accent hover:text-accent"
+                        className="grid transition-all border rounded-full h-11 w-11 place-items-center border-white/10 text-white/70 hover:border-accent hover:text-accent"
                         rel="noreferrer"
                         aria-label={`Ver código en GitHub de ${project.title}`}
                       >
@@ -279,7 +293,7 @@ const Work = () => {
                       <a
                         href={project.links.demo}
                         target="_blank"
-                        className="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-white/70 transition-all hover:border-accent hover:text-accent"
+                        className="grid transition-all border rounded-full h-11 w-11 place-items-center border-white/10 text-white/70 hover:border-accent hover:text-accent"
                         rel="noreferrer"
                         aria-label={`Visitar demo de ${project.title}`}
                       >
@@ -302,11 +316,7 @@ const Work = () => {
         >
           {selectedProject && (
             <>
-              <button
-                className="modal-close"
-                onClick={() => setShowModalProject(false)}
-                aria-label="Cerrar"
-              >
+              <button className="modal-close" onClick={() => setShowModalProject(false)} aria-label="Cerrar">
                 <MdClose size={22} />
               </button>
 
@@ -316,7 +326,7 @@ const Work = () => {
                     {selectedProject.subImages.map((subImage, index) => (
                       <SwiperSlide key={index} className="h-full">
                         <div
-                          className="h-full w-full bg-cover bg-center"
+                          className="w-full h-full bg-center bg-cover"
                           style={{ backgroundImage: `url(${subImage.src})` }}
                         />
                       </SwiperSlide>
@@ -333,7 +343,7 @@ const Work = () => {
                   </Swiper>
                 ) : (
                   <div
-                    className="h-full w-full bg-cover bg-center"
+                    className="w-full h-full bg-center bg-cover"
                     style={{ backgroundImage: `url(${selectedProject.img.src})` }}
                   />
                 )}
@@ -345,12 +355,9 @@ const Work = () => {
                 </span>
                 <h2 className="mt-2 text-3xl font-bold text-white">{selectedProject.info.mainTitle}</h2>
 
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-4">
                   {selectedProject.tools.map((tool) => (
-                    <span
-                      key={tool}
-                      className="rounded-full bg-[#27272d] px-3 py-1 text-xs text-white/60"
-                    >
+                    <span key={tool} className="rounded-full bg-[#27272d] px-3 py-1 text-xs text-white/60">
                       {tool}
                     </span>
                   ))}
@@ -359,7 +366,7 @@ const Work = () => {
                 <p className="mt-5 leading-relaxed text-white/70">{selectedProject.info.description}</p>
 
                 {(selectedProject.links?.demo || selectedProject.links?.github) && (
-                  <div className="mt-8 flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-4 mt-8">
                     {selectedProject.links.demo && (
                       <a href={selectedProject.links.demo} target="_blank" rel="noreferrer">
                         <Button variant="default" className="gap-2">
