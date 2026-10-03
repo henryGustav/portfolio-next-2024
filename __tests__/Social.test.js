@@ -8,7 +8,7 @@ describe('Social', () => {
 
     expect(links).toHaveLength(3)
     expect(links[0]).toHaveAttribute('href', 'https://github.com/henryGustav')
-    expect(links[1]).toHaveAttribute('href', 'https://www.linkedin.com/in/henry-tipantuna/')
+    expect(links[1]).toHaveAttribute('href', 'https://www.linkedin.com/in/henrytipantuna/')
     expect(links[2]).toHaveAttribute('href', expect.stringContaining('api.whatsapp.com'))
   })
 
